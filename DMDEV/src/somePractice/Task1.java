@@ -1,3 +1,5 @@
+package somePractice;
+
 import java.util.Scanner;
 
 public class Task1 {
