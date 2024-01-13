@@ -36,10 +36,9 @@ public class GuessGame {
     private void outputWinners(int k){
         for (int i = 0; i < 3; i++)
             if (playerGuessed[i]){
-                if (k >= 2) System.out.println("and");
                 players.get(i).printVictory();
+                if (k >= 2 && i < 2) System.out.println("and");
             }
-
     }
 
     public void run() {
