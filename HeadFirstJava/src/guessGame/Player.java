@@ -6,7 +6,7 @@ public class Player {
     private String name;
     private int answer;
 
-    private int code;
+    private final int code;
     public static int number = 0;
 
     public int getCode() {
@@ -38,7 +38,7 @@ public class Player {
                 " answer is " + answer;
     }
 
-    public String printVictory(){
-        return "Player " + name + " win";
+    public void printVictory(){
+        System.out.println("Player " + name + " win");
     }
 }
