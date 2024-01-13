@@ -15,9 +15,11 @@ public class Task3 {
             List<Human> result = new ArrayList<>();
 
             String line = bf.readLine();
+
             while (line != null){
-                if (Integer.parseInt(line.split(" ")[1]) < 0) throw new IllegalArgumentException();
-                result.add(new Human(line.split(" ")[0], Integer.parseInt(line.split(" ")[1])));
+                String[] temp = line.split(" ");
+                if (Integer.parseInt(temp[1]) < 0) throw new IllegalArgumentException();
+                result.add(new Human(temp[0], Integer.parseInt(temp[1])));
                 line = bf.readLine();
             }
 
