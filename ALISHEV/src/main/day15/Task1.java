@@ -16,7 +16,6 @@ public class Task1 {
             }
             line = reader.readLine();
         }
-
         writer.close();
         reader.close();
     }
