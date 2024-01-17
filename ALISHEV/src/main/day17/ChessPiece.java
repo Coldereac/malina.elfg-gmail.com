@@ -7,12 +7,12 @@ public enum ChessPiece {
     BISHOP_WHITE(3.5f, '♗'),
     KNIGHT_WHITE(3, '♘'),
     PAWN_WHITE(1, '♙'),
-    KING_BLACK(100, '♔'),
-    QUEEN_BLACK(9, '♕'),
-    ROOK_BLACK(5, '♖'),
-    BISHOP_BLACK(5, '♗'),
-    KNIGHT_BLACK(3.5f, '♘'),
-    PAWN_BLACK(1, '♘');
+    KING_BLACK(100, '♚'),
+    QUEEN_BLACK(9, '♛'),
+    ROOK_BLACK(5, '♜'),
+    BISHOP_BLACK(5, '♝'),
+    KNIGHT_BLACK(3.5f, '♞'),
+    PAWN_BLACK(1, '♟');
 
     private final float cost;
 
