@@ -1,4 +1,4 @@
-package main.day17;
+package main.day17.task2;
 
 public enum ChessPiece {
     KING_WHITE(100, '♔'),
@@ -12,7 +12,8 @@ public enum ChessPiece {
     ROOK_BLACK(5, '♜'),
     BISHOP_BLACK(5, '♝'),
     KNIGHT_BLACK(3.5f, '♞'),
-    PAWN_BLACK(1, '♟');
+    PAWN_BLACK(1, '♟'),
+    EMPTY(-1, '_');
 
     private final float cost;
 
