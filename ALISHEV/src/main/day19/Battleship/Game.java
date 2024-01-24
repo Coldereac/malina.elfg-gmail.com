@@ -25,6 +25,7 @@ public class Game {
     }
 
     private boolean checkInput(String input, int size, Field field) {
+        boolean result = true;
         String[] temp = input.split(";");
         int count = 0;
         int[] tempInt;
@@ -47,6 +48,6 @@ public class Game {
         else for (int i = 1; i < temp.length-1; i++) {
             if (!(Math.abs(Integer.parseInt(temp[0].split(",")[1]) - Integer.parseInt(temp[1].split(",")[1])) == 1)) return false;
         }
-
+        return true;
     }
 }
