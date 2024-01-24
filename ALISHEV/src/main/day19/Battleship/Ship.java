@@ -94,4 +94,8 @@ public class Ship {
             position.addFirst(temp);
         }
     }
+
+    public List<Coordinates> getAreola() {
+        return areola;
+    }
 }
