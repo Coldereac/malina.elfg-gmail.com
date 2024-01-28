@@ -1,4 +1,8 @@
 package main.day19.Battleship;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /*
 0 - ничего
 1 - есть корабль
@@ -6,16 +10,18 @@ package main.day19.Battleship;
 -1 уничтоженный корабль
  */
 public class Field {
-    private static int[][] field = new int[10][10];
-
+    private final int[][] field = new int[10][10];
+    private final List<Ship> ships;
     public void print(){
+        System.out.println("    1  2  3  4  5  6  7  8  9  10");
         for (int i = 0; i < field.length; i++) {
+            System.out.printf("%-2d", i+1);
             for (int j = 0; j < field[i].length; j++) {
                 switch (field[i][j]){
-                    case 0 -> System.out.print("⬜");
-                    case 1 -> System.out.print("\uD83D\uDEE5");
-                    case -1 -> System.out.print("\uD83D\uDFE5");
-                    case 2 -> System.out.print("*");
+                    case -1 -> System.out.printf("%3s", "X");
+                    case 0 -> System.out.printf("%3s", "0");
+                    case 1 -> System.out.printf("%3s", "К");
+                    case 2 -> System.out.printf("%3s", "*");
                 }
             }
             System.out.println();
@@ -27,6 +33,14 @@ public class Field {
     }
 
     public void setField(int x, int y, int value) {
-        this.field[x][y] = value;
+        field[x][y] = value;
+    }
+
+    public List<Ship> getShips() {
+        return ships;
+    }
+
+    public Field(){
+        this.ships = new ArrayList<>();
     }
 }

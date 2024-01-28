@@ -1,6 +1,5 @@
 package main.day19.Battleship;
 
-import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
