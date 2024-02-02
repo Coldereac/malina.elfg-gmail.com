@@ -37,7 +37,7 @@ public class Game {
         }
 
         for (int i = 0; i < 50; i ++){
-            System.out.println("");
+            System.out.println(" ");
         }
 
         System.out.println("Игрок 2 должен ввести координты своих кораблей. Игрок 1 должен отвернуться от экрана");
