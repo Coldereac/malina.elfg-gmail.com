@@ -7,7 +7,7 @@ import java.util.List;
 0 - ничего
 1 - есть корабль
 2 - мимо
--1 уничтоженный корабль
+-1 уничтоженный / подбитый корабль
  */
 public class Field {
     private final int[][] field = new int[10][10];
@@ -42,5 +42,21 @@ public class Field {
 
     public Field(){
         this.ships = new ArrayList<>();
+    }
+
+    public Ship findShip(int x, int y){
+        for (Ship s: ships){
+            for (Coordinates c: s.getPosition()){
+                if (new Coordinates(x, y).equals(c))
+                    return s;
+            }
+        }
+        return null;
+    }
+
+    public void markAreola(List<Coordinates> areola){
+        for (Coordinates cord: areola){
+            field[cord.getY()][cord.getX()] = -1;
+        }
     }
 }

@@ -10,6 +10,8 @@ public class Ship {
 
     private boolean horizontal;
 
+    private int amountOfHits;
+
     public Ship(String coordinates) {
         position = new ArrayList<>();
         String[] temp = coordinates.split(";");
@@ -22,7 +24,7 @@ public class Ship {
             sortPosition();
         }
         findAreola();
-
+        amountOfHits = 0;
     }
 
     private void findAreola() {
@@ -98,5 +100,17 @@ public class Ship {
 
     public List<Coordinates> getAreola() {
         return areola;
+    }
+
+    public boolean checkIfDestroyed(){
+        return size == amountOfHits;
+    }
+
+    public List<Coordinates> getPosition() {
+        return position;
+    }
+
+    public void addHit(){
+        amountOfHits++;
     }
 }
