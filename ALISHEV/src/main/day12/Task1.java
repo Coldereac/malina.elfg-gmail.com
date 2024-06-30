@@ -19,5 +19,6 @@ public class Task1 {
         for (String car : cars) {
             System.out.println(car);
         }
+        //Test
     }
 }
